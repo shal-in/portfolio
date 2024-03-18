@@ -1,0 +1,94 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #F1FAEE;
+    font-family: 'Kufam';
+    width: 1152px;
+    margin: auto;
+}
+
+::selection {
+    background-color: #E02D15;
+}
+
+#header-container {
+    width: 1007px;
+    height: auto;
+    font-size: 26px;
+    margin: auto;
+    text-align: justify;
+}
+
+#header-text {
+    color: #0A8B99;
+}
+
+#header-text::selection {
+    background-color: black;
+}
+
+
+/* Social-container */
+#connect-container {
+    font-weight: bolder;
+    text-align: center;
+
+    user-select: none;
+}
+
+#connect-text {
+    text-align: center;
+    font-size: 27px;
+}
+
+.social-icon{
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.social-icon:hover {
+    fill: #E02D15;
+    cursor: pointer;
+}
+
+#email-icon {
+    margin-right: 0px
+}
+
+/* Section containers */
+/* General */
+.section-title {
+    color: #E02D15;
+    width: 200px;
+    text-decoration: underline;
+}
+
+
+
+
+/* Text styling */
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hyperlink {
+    color: #E02D15;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hyperlink::selection {
+    background-color: #E02D15;
+    color: black;
+}
