@@ -1,5 +1,0 @@
-# Ignore specific file in the misc directory
-misc/shalin-personal-website-d66ff24efaa9.json
-
-# Ignore all .pyc files in the misc directory
-misc/*.pyc
