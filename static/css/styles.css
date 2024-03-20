@@ -7,7 +7,8 @@ body {
     background-color: #F1FAEE;
     font-family: 'Kufam';
     width: 1152px;
-    margin: auto;
+    margin: auto; /* Reset default body margin */
+    text-align: center; /* Horizontally center inline and inline-block elements */
 }
 
 ::selection {
@@ -15,33 +16,65 @@ body {
 }
 
 #header-container {
-    width: 1007px;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Distribute space evenly between child elements */
+    width: 680px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+
+#canvas-container {
+    width: 250px;
     height: auto;
-    font-size: 26px;
-    margin: auto;
-    text-align: justify;
+    border: 1px solid black;
 }
 
-#header-text {
-    color: #0A8B99;
+#canvas {
+    width: 250px;
+    height: 250px;
 }
 
-#header-text::selection {
+#header-text-container {
+    width: 340px;
+    border: 1px solid black;
+}
+
+/* Connect divider */
+#connect-divider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#connect-divider-left {
+    width: 800px;
+    height: 5px;
     background-color: black;
+    margin-top: 50px;
 }
 
-
+#connect-divider-right {
+    width: 85px;
+    height: 5px;
+    background-color: black;
+    margin-top: 50px;
+}
 /* Social-container */
-#connect-container {
+#connect-container-buttons {
     font-weight: bolder;
     text-align: center;
-
     user-select: none;
+    width: 260px;
 }
 
 #connect-text {
     text-align: center;
     font-size: 27px;
+    color: #E02D15;
+    font-weight: bold;
 }
 
 .social-icon{
@@ -61,10 +94,23 @@ body {
 
 /* Section containers */
 /* General */
+
+.section-container{
+    width: 720px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .section-title {
     color: #E02D15;
     width: 200px;
     text-decoration: underline;
+}
+
+.section-text {
+    text-align: justify;
+    margin-bottom: 22px;
 }
 
 
@@ -91,4 +137,33 @@ body {
 .hyperlink::selection {
     background-color: #E02D15;
     color: black;
+}
+
+
+#divider-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+#divider-1-left {
+    width: 200px;
+    height: 5px;
+    background-color: black;
+    margin-top: 50px;
+}
+
+#divider-1-middle {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    margin-top: 50px;
+}
+
+#divider-1-right {
+    width: 85px;
+    height: 5px;
+    background-color: black;
+    margin-top: 50px;
 }
