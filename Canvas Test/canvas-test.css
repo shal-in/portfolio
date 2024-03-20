@@ -1,0 +1,16 @@
+body{
+    background-color: white;
+    text-align: center;
+}
+
+#myCanvas {
+    margin: auto;
+    position: relative;
+}
+
+#test-btn {
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    z-index: 1; /* Ensure the button appears above the canvas */
+}
