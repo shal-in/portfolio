@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Kufam' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+    <title>Shalin Ahasan</title>
 </head>
 <body>
     <div id="header-container">
         <div id="canvas-container">
-            <div id="canvas"></div>
-            <div id="canvas-text"></div>
+            <canvas id="myCanvas" width="250" height="250"></canvas>
+            <div id="canvas-text">
+                Some text about art blah blah. Two lines at most [i]
+            </div>
         </div>
 
         <div id="header-text-container">
@@ -20,7 +24,7 @@
                 Shalin Ahasan
             </h1>
             <h2 id="header-text-second">
-                This is a collection of things from me and my corner of the internet.
+                This is a collection of things from me and <span class="italic">my corner of the internet.</span>
             </h2>
         </div>
     </div>
@@ -51,23 +55,27 @@
             Hey! I'm an <span class="bold">aspiring software engineer</span>, currently looking for a graduate/junior role. After wrapping up 
             my <span class="bold">Bachelor's degree in Natural Sciences</span> (with a focus on Molecular and Cell Biology, and Synthetic Organic Chemistry) at UCL 
             last September, I decided it was time to hit pause and focus on the things that truly light me up. The past six months of my 
-            life have been largely filled with building <span class="hyperlink italic" link="projects">silly projects</span>, 
-            <span class="hyperlink" link="tutoring">tutoring GCSE and A-level students</span> in Maths and Sciences, and some travelling.
+            life have been largely filled with building <span class="hyperlink italic" link="projects">silly <span class="bold">projects</span></span>, 
+            <span class="hyperlink" link="tutoring"><span class="bold">tutoring</span> GCSE and A-level students</span> in Maths and Sciences, and some travelling.
         </p>
 
         <p class="section-text" id="about-text-1">
             Now, I'm eager to channel that same passion and energy into my next professional venture. I am currently looking for a role in 
-            Software Engineering, both graduate and junior positions. <span class="bold">If you have any leads, I’d love to connect via 
+            Software Engineering, both graduate and junior positions. 
+        </p>
+
+        <p class="section-text" id="about-text-2">
+            <span class="bold">If you have any leads, I’d love to connect via 
                 <span class="hyperlink" link="linkedin">LinkedIn</span> or <span class="hyperlink" link="email">email</span>.</span>
         </p>
 
         <!-- add image -->
     </div>
 
-    <div class="divider-1">
-        <div class="divider-1-left"></div>
-        <div class="divider-1-middle"></div>
-        <div class="divider-1-right"></div>
+    <div id="divider-1">
+        <div id="divider-1-left"></div>
+        <div id="divider-1-middle"></div>
+        <div id="divider-1-right"></div>
     </div>
 
     <div class="section-container" id="projects-container">
@@ -83,15 +91,9 @@
             Here are my two <span class="bold">current favourite</span> projects to show off:
         </p>
     </div>
-
-    <div class="divider-1">
-        <div id="divider-1-left"></div>
-        <div id="divider-1-middle"></div>
-        <div id="divider-1-right"></div>
-    </div>
-
 </body>
 
 <script src="/static/js/index.js"></script>
+<script src="/Canvas Test/canvas-test.js"></script>
 </html>
 

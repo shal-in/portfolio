@@ -3,10 +3,14 @@
     margin: 0px;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 400 to 900 */
+
 body {
     background-color: #F1FAEE;
-    font-family: 'Kufam';
-    width: 1152px;
+    font-family: "Kufam", sans-serif;
+    font-optical-sizing: auto;
+    max-width: 1152px;
     margin: auto; /* Reset default body margin */
     text-align: center; /* Horizontally center inline and inline-block elements */
 }
@@ -18,63 +22,64 @@ body {
 #header-container {
     display: flex; /* Use flexbox */
     justify-content: space-between; /* Distribute space evenly between child elements */
-    width: 680px;
+    width: 60%;
     text-align: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 40px;
+    color: #0A8B99;
 }
 
 #canvas-container {
     width: 250px;
     height: auto;
-    border: 1px solid black;
 }
 
-#canvas {
-    width: 250px;
-    height: 250px;
+#myCanvas {
+    margin: auto;
+    position: relative;
+    /* border: 1px dashed black; */
 }
 
-#header-text-container {
-    width: 340px;
-    border: 1px solid black;
-}
-
-/* Connect divider */
-#connect-divider {
+#canvas-text {
+    margin-top: 8px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    text-align: justify;
+    font-weight: 700;
+    color: black;
+}
+#header-text-container {
+    width: 380px;
+    /* border: 1px solid black; */
 }
 
-#connect-divider-left {
-    width: 800px;
-    height: 5px;
-    background-color: black;
-    margin-top: 50px;
+#header-text-main {
+    text-align: center;
+    font-size: 51px;
+    margin-bottom: 20px;
 }
 
-#connect-divider-right {
-    width: 85px;
-    height: 5px;
-    background-color: black;
-    margin-top: 50px;
+#header-text-second {
+    font-weight: 500; /* Adjust the font weight as needed */
+    text-align: justify;
+    font-size: 35px;
 }
+
 /* Social-container */
 #connect-container-buttons {
-    font-weight: bolder;
     text-align: center;
     user-select: none;
-    width: 260px;
+    width: 22%;
 }
 
 #connect-text {
     text-align: center;
-    font-size: 27px;
+    font-size: 26px;
     color: #E02D15;
-    font-weight: bold;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Adjust the font weight as needed */
+    font-style: normal;
 }
 
 .social-icon{
@@ -94,26 +99,28 @@ body {
 
 /* Section containers */
 /* General */
-
 .section-container{
-    width: 720px;
+    width: 60%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .section-title {
     color: #E02D15;
     width: 200px;
     text-decoration: underline;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .section-text {
     text-align: justify;
     margin-bottom: 22px;
+    font-weight: 400;
 }
-
-
 
 
 /* Text styling */
@@ -122,8 +129,9 @@ body {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 700; /* Adjust the font weight as needed */
 }
+
 
 .hyperlink {
     color: #E02D15;
@@ -139,31 +147,40 @@ body {
     color: black;
 }
 
+/* Dividers */
+/* Connect divider */
+#connect-divider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
+#connect-divider-left, #connect-divider-right {
+    background-color: black;
+    margin-top: 50px;
+    height: 5px;
+}
+
+#connect-divider-left { width: 60%;}
+#connect-divider-right {width: 7%;}
+#connect-container-buttons {width: 22%;}
+
+
+/* Divider 1 */
 #divider-1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0px;
+    margin: auto;
+    margin-bottom: 40px;
 }
 
-#divider-1-left {
-    width: 200px;
+#divider-1-left, #divider-1-middle, #divider-1-right {
     height: 5px;
-    background-color: black;
-    margin-top: 50px;
+    background-color: #0A8B99;
 }
 
-#divider-1-middle {
-    width: 20px;
-    height: 5px;
-    background-color: black;
-    margin-top: 50px;
-}
-
-#divider-1-right {
-    width: 85px;
-    height: 5px;
-    background-color: black;
-    margin-top: 50px;
-}
+#divider-1-left {width: 7%;} 
+#divider-1-middle {width: 22%;} 
+#divider-1-right {width: 60%;}
