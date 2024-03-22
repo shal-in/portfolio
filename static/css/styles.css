@@ -1,186 +1,173 @@
-*{
-    padding: 0px;
-    margin: 0px;
+html, body {
+    padding: 0;
+    margin: 0;
 }
-
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 400 to 900 */
 
 body {
-    background-color: #F1FAEE;
+    background-color: #BDCFE4;
     font-family: "Kufam", sans-serif;
     font-optical-sizing: auto;
-    max-width: 1152px;
-    margin: auto; /* Reset default body margin */
-    text-align: center; /* Horizontally center inline and inline-block elements */
+    font-weight: normal;
+    line-height: 1.5;
+    color: #35497D;
 }
 
-::selection {
-    background-color: #E02D15;
-}
-
-#header-container {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Distribute space evenly between child elements */
-    width: 60%;
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 40px;
-    color: #0A8B99;
-}
-
-#canvas-container {
-    width: 250px;
-    height: auto;
-}
-
-#myCanvas {
+section {
+    max-width: 950px;
+    min-width: 280px;
     margin: auto;
-    position: relative;
-    /* border: 1px dashed black; */
+    border: 5px solid rebeccapurple;
 }
 
-#canvas-text {
-    margin-top: 8px;
+/* Launch Page */
+#launch-page-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: justify;
-    font-weight: 700;
-    color: black;
-}
-#header-text-container {
-    width: 380px;
-    /* border: 1px solid black; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+    user-select: none;
+    background-color: #BDCFE4;
+
+    display: none;
 }
 
-#header-text-main {
-    text-align: center;
-    font-size: 51px;
+#launch-page-container.hide {
+    opacity: 0; /* Make title page invisible */
+}
+
+@media (min-height: 500px) {
+    #launch-page-box {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 600px) {
+    #launch-page-box {
+        margin-left: -180px;
+    }
+ }
+
+#launch-page-name {
+    color: #CB152B;
+    font-size: 3rem;
+    /* border: 1px solid black; */
+    text-align: left;
+    max-width: 370px;
+}
+
+#launch-page-text {
+    color: #35497D;
+    font-weight: normal;
+    font-size: 2.034rem;
+    max-width: 300px;
+    /* border: 1px solid black; */
+    opacity: 0;
+    margin-top: -20px;
+}
+
+#launch-text-effect {
+    color: rgba(53, 73, 125, 0.40);
+}
+
+#landing-page-text-0 {
+    margin-top: auto;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+#landing-page-text-1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid black;
+}
+
+/* Landing Page */
+
+#landing-page-text-container {
+    font-size: 1.75rem;
+    min-width: 280px;
+    max-width: 450px;
+    border: 1px solid brown;
+    margin: auto;
+}
+
+
+#landing-page-connect-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid green;
+    min-width: 280px;
+    max-width: 450px;
+    margin: auto;
+}
+
+#landing-page-connect-text {
+    min-width: 280px;
+    max-width: 450px;
+    font-size: 1.25em;
+    margin-top: auto;
     margin-bottom: 20px;
 }
 
-#header-text-second {
-    font-weight: 500; /* Adjust the font weight as needed */
-    text-align: justify;
-    font-size: 35px;
+.connect-container {
+    border: 1px solid red;
+    display: flex;
+    min-width: 270px;
+    max-width: 450px;
+    margin-bottom: 10px;
 }
 
-/* Social-container */
-#connect-container-buttons {
-    text-align: center;
-    user-select: none;
-    width: 22%;
+.connect-container:hover {
+    background-color: red;
 }
 
-#connect-text {
-    text-align: center;
-    font-size: 26px;
-    color: #E02D15;
-    font-optical-sizing: auto;
-    font-weight: 700; /* Adjust the font weight as needed */
-    font-style: normal;
-}
-
-.social-icon{
-    width: 35px;
-    height: auto;
+.connect-icon-1 {
+    border: 1px solid blue;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-right: 10px;
 }
 
-.social-icon:hover {
-    fill: #E02D15;
-    cursor: pointer;
+.connect-text-1 {
+    border: 1px solid black;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-#email-icon {
-    margin-right: 0px
-}
 
-/* Section containers */
-/* General */
-.section-container{
-    width: 60%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
 
-.section-title {
-    color: #E02D15;
-    width: 200px;
-    text-decoration: underline;
-    font-size: 40px;
-    font-weight: 700;
-}
 
-.section-text {
-    text-align: justify;
-    margin-bottom: 22px;
-    font-weight: 400;
-}
 
 
 /* Text styling */
+.red-text {
+    color: #CB152B;
+}
+
 .italic {
     font-style: italic;
 }
 
 .bold {
-    font-weight: 700; /* Adjust the font weight as needed */
+    font-weight: 700;
 }
 
-
-.hyperlink {
-    color: #E02D15;
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 (fully transparent) */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 (fully opaque) */
+    }
 }
 
-.hyperlink:hover {
-    text-decoration: underline;
-    cursor: pointer;
+/* Apply the fade-in animation to elements with the .fade-in class */
+.fade-in {
+    animation: fadeIn 0.5s ease-in; /* Use the fadeIn animation with 1 second duration and ease-in timing function */
 }
-
-.hyperlink::selection {
-    background-color: #E02D15;
-    color: black;
-}
-
-/* Dividers */
-/* Connect divider */
-#connect-divider {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#connect-divider-left, #connect-divider-right {
-    background-color: black;
-    margin-top: 50px;
-    height: 5px;
-}
-
-#connect-divider-left { width: 60%;}
-#connect-divider-right {width: 7%;}
-#connect-container-buttons {width: 22%;}
-
-
-/* Divider 1 */
-#divider-1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px;
-    margin: auto;
-    margin-bottom: 40px;
-}
-
-#divider-1-left, #divider-1-middle, #divider-1-right {
-    height: 5px;
-    background-color: #0A8B99;
-}
-
-#divider-1-left {width: 7%;} 
-#divider-1-middle {width: 22%;} 
-#divider-1-right {width: 60%;}
