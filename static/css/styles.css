@@ -89,6 +89,21 @@ section {
 
 /* Landing Page */
 
+#top-row-container {
+    display: flex;
+    border: 3px solid black;
+    margin: auto;
+    max-width: 750px;
+}
+
+@media only screen and (max-width: 750px) {
+    #top-row-container {
+        display: block;
+    }
+}
+
+
+
 #landing-page-text-container {
     font-size: 1.75rem;
     min-width: 280px;

@@ -15,45 +15,51 @@ window.onload = function() {
     var canvasWidth = 200;
     var canvasHeight = 200;
 
-    // Draw lines
-    drawLine([getRandomInt(0,60),60], [getRandomInt(140,200), 60], getRandomColour(), 3); // Draw a horizontal line
-    let topPoint = [getRandomInt(70, 130), 60];
-    plotPoint(topPoint, 'red', 2)
+    // // Draw lines (Comment In)
+    // drawLine([getRandomInt(0,60),60], [getRandomInt(140,200), 60], getRandomColour(), 3); // Draw a horizontal line
+    // let topPoint = [getRandomInt(70, 130), 60];
+    // plotPoint(topPoint, 'red', 2)
 
-    drawLine([getRandomInt(0,60),140], [getRandomInt(140,200), 140], getRandomColour(), 3); // Draw a horizontal line
-    let bottomPoint = [getRandomInt(70,130), 140]
-    plotPoint(bottomPoint, 'red', 2)
-
-
-    drawLine([60,getRandomInt(0,60)], [60, getRandomInt(140,200)], getRandomColour(), 3); // Draw a vertical line;
-    let leftPoint = [60, getRandomInt(70, 130)]
-    plotPoint(leftPoint, 'red', 2)
+    // drawLine([getRandomInt(0,60),140], [getRandomInt(140,200), 140], getRandomColour(), 3); // Draw a horizontal line
+    // let bottomPoint = [getRandomInt(70,130), 140]
+    // plotPoint(bottomPoint, 'red', 2)
 
 
-    drawLine([140,getRandomInt(0, 60)], [140, getRandomInt(140,200)], getRandomColour(), 3); // Draw a vertical line
-    let rightPoint = [140, getRandomInt(70, 130)]
-    plotPoint(rightPoint, 'red', 2)
+    // drawLine([60,getRandomInt(0,60)], [60, getRandomInt(140,200)], getRandomColour(), 3); // Draw a vertical line;
+    // let leftPoint = [60, getRandomInt(70, 130)]
+    // plotPoint(leftPoint, 'red', 2)
 
-    // top right
-    if (rightPoint[1] < 88 && topPoint[0] > 112) {
-        console.log('top right')
-        circle = drawCircleThroughTwoPoints(rightPoint, topPoint, getRandomColour(), 3)
-    }
+
+    // drawLine([140,getRandomInt(0, 60)], [140, getRandomInt(140,200)], getRandomColour(), 3); // Draw a vertical line
+    // let rightPoint = [140, getRandomInt(70, 130)]
+    // plotPoint(rightPoint, 'red', 2)
+
+    // // top right
+    // if (rightPoint[1] < 88 && topPoint[0] > 112) {
+    //     console.log('top right')
+    //     circle = drawCircleThroughTwoPoints(rightPoint, topPoint, getRandomColour(), 3)
+    // }
     
-    if (rightPoint[1] > 112 && bottomPoint[0] > 112) {
-        console.log('bottom right')
-        circle = drawCircleThroughTwoPoints(rightPoint, bottomPoint, getRandomColour(), 3)
-    }
+    // if (rightPoint[1] > 112 && bottomPoint[0] > 112) {
+    //     console.log('bottom right')
+    //     circle = drawCircleThroughTwoPoints(rightPoint, bottomPoint, getRandomColour(), 3)
+    // }
 
-    if (leftPoint[1] < 88 && topPoint[0] < 88) {
-        console.log('top left')
-        circle = drawCircleThroughTwoPoints(leftPoint, topPoint, getRandomColour(), 3)
-    }
+    // if (leftPoint[1] < 88 && topPoint[0] < 88) {
+    //     console.log('top left')
+    //     circle = drawCircleThroughTwoPoints(leftPoint, topPoint, getRandomColour(), 3)
+    // }
 
-    if (leftPoint[1] > 11 && bottomPoint[0] < 88) {
-        console.log('bottom left')
-        circle = drawCircleThroughTwoPoints(leftPoint, bottomPoint, getRandomColour(), 3)
-    }
+    // if (leftPoint[1] > 11 && bottomPoint[0] < 88) {
+    //     console.log('bottom left')
+    //     circle = drawCircleThroughTwoPoints(leftPoint, bottomPoint, getRandomColour(), 3)
+    // }
+
+    drawLine([0,60], [200,60], 'grey', 2)
+    drawLine([0,140], [200,140], 'grey', 2)
+    drawLine([60,0], [60,200], 'grey', 2)
+    drawLine([140,0], [140,200], 'grey', 2)
+
 
 
 

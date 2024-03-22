@@ -1,9 +1,28 @@
-body{
-    background-color: white;
-    text-align: center;
+body {
+    background-color: #BDCFE4;
+    font-family: "Kufam", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #35497D;
+}
+
+#canvas-container {
+    margin: auto;
+    border: 1px solid red;
+    width: 250px;
 }
 
 #myCanvas {
-    margin: auto;
+    display: block; /* Change the display property to block */
+    margin: auto; /* Set the top and bottom margins to auto */
     position: relative;
+    border: 1px dashed black;
+}
+
+#canvas-text {
+    color: #1E1E34;
+    font-style: 'Kufam';
+    font-weight: 600;
+    margin: auto;
 }

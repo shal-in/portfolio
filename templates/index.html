@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/Canvas Test/canvas-test.css   ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -23,10 +24,19 @@
     </div>
 
     <section id="landing-page-section">
-        <div id="landing-page-text-container">
-            <p class="text" id="landing-page-text-0">Hello!</p>
-            <p class="text" id="landing-page-text-1">I'm <span class="bold red-text">Shalin Ahasan</span>, an aspiring
-            software engineer, and a recent graduate in Natural Sciences.</p>
+        <div id="top-row-container">
+            <div id="canvas-container">
+                <canvas id="myCanvas" width="200" height="200"></canvas>
+                
+                <p id="canvas-text">This is an example of text. Here is more text. Here is even more text.</p>
+            </div>
+    
+    
+            <div id="landing-page-text-container">
+                <p class="text" id="landing-page-text-0">Hello!</p>
+                <p class="text" id="landing-page-text-1">I'm <span class="bold red-text">Shalin Ahasan</span>, an aspiring
+                software engineer, and a recent graduate in Natural Sciences.</p>
+            </div>
         </div>
 
         <div id="landing-page-connect-container">
@@ -47,4 +57,5 @@
 </body>
 
 <script src="/static/js/index.js"></script>
+<script src="/Canvas Test/canvas-test.js "></script>
 </html>
