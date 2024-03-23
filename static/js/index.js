@@ -44,6 +44,19 @@ launchPageTextEl.style.opacity = 1;
 //     launchPageTextEl.style.opacity = 1
 // }, 800)
 
+const arrowDownEl = document.getElementById('arrow-down');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) { // Adjust the threshold value as needed
+        console.log('Scrolled down more than 200 pixels');
+        arrowDownEl.classList.add('fade-out');
+        setTimeout(() => {
+        arrowDownEl.style.display = 'none';
+        }, 490)
+    }
+});
+
+
+
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);

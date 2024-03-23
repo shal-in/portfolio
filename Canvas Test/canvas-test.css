@@ -9,14 +9,13 @@ body {
 
 #canvas-container {
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 250px;
 }
 
 #myCanvas {
     display: block; /* Change the display property to block */
     margin: auto; /* Set the top and bottom margins to auto */
-    position: relative;
     border: 1px dashed black;
 }
 

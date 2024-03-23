@@ -13,10 +13,11 @@ body {
 }
 
 section {
-    max-width: 950px;
+    max-width: 1000px;
     min-width: 280px;
     margin: auto;
     border: 5px solid rebeccapurple;
+    height: 99vh;
 }
 
 /* Launch Page */
@@ -55,17 +56,17 @@ section {
 
 #launch-page-name {
     color: #CB152B;
-    font-size: 3rem;
+    font-size: 5rem;
     /* border: 1px solid black; */
     text-align: left;
-    max-width: 370px;
+    max-width: 700px;
 }
 
 #launch-page-text {
     color: #35497D;
     font-weight: normal;
-    font-size: 2.034rem;
-    max-width: 300px;
+    font-size: 3rem;
+    max-width: 500px;
     /* border: 1px solid black; */
     opacity: 0;
     margin-top: -20px;
@@ -75,82 +76,85 @@ section {
     color: rgba(53, 73, 125, 0.40);
 }
 
+
+
+
+
+
+/* Landing Page */
+#landing-page-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#top-row-container {
+    display: flex;
+    /* border: 3px solid black; */
+    max-width: 1000px;
+    margin: auto;
+}
+
+#landing-page-text-container {
+    font-size: 2rem;
+    min-width: 280px;
+    max-width: 450px;
+    /* border: 1px solid brown; */
+    margin: auto;
+    margin-left: 80px;
+}
+
 #landing-page-text-0 {
     margin-top: auto;
     margin-bottom: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #landing-page-text-1 {
     margin-top: auto;
     margin-bottom: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-
-/* Landing Page */
-
-#top-row-container {
-    display: flex;
-    border: 3px solid black;
-    margin: auto;
-    max-width: 750px;
-}
-
-@media only screen and (max-width: 750px) {
-    #top-row-container {
-        display: block;
-    }
-}
-
-
-
-#landing-page-text-container {
-    font-size: 1.75rem;
-    min-width: 280px;
-    max-width: 450px;
-    border: 1px solid brown;
-    margin: auto;
-}
-
 
 #landing-page-connect-container {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     min-width: 280px;
-    max-width: 450px;
-    margin: auto;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: 150px;
+    margin-top: -100px;
 }
 
 #landing-page-connect-text {
     min-width: 280px;
     max-width: 450px;
-    font-size: 1.25em;
+    font-size: 2em;
     margin-top: auto;
     margin-bottom: 20px;
 }
 
 .connect-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     min-width: 270px;
-    max-width: 450px;
+    max-width: 550px;
     margin-bottom: 10px;
-}
-
-.connect-container:hover {
-    background-color: red;
+    font-size: 1.35em;
 }
 
 .connect-icon-1 {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 10px;
+    width: 30px;
+    height: auto;
 }
 
 .connect-text-1 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -159,8 +163,33 @@ section {
     margin-bottom: auto;
 }
 
+@media only screen and (max-width: 750px) {
+    #top-row-container {
+        display: block;
+    }
+    
 
+    #landing-page-text-container {
+        margin-left: 0px;
+    }
 
+    #landing-page-connect-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    }
+}
+
+#arrow-down {
+    width: 40px;
+    height: auto;
+    transform: rotate(180deg);
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: 30px;
+    position: relative  ;
+}
 
 /* Text styling */
 .red-text {
@@ -187,4 +216,18 @@ section {
 /* Apply the fade-in animation to elements with the .fade-in class */
 .fade-in {
     animation: fadeIn 0.5s ease-in; /* Use the fadeIn animation with 1 second duration and ease-in timing function */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* Start with opacity 1 (fully opaque) */
+    }
+    to {
+        opacity: 0; /* End with opacity 0 (fully transparent) */
+    }
+}
+
+/* Apply the fade-out animation to elements with the .fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s ease-out; /* Use the fadeOut animation with 0.5 second duration and ease-out timing function */
 }
