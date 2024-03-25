@@ -1,6 +1,13 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
 }
 
 body {
@@ -20,6 +27,9 @@ section {
     height: 99vh;
 }
 
+
+
+
 /* Launch Page */
 #launch-page-container {
     position: fixed;
@@ -29,37 +39,27 @@ section {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     opacity: 1;
     transition: opacity 1s ease-in-out; /* Smooth transition */
     user-select: none;
     background-color: #BDCFE4;
 
-    display: none;
+    /* display: none; */
 }
 
 #launch-page-container.hide {
     opacity: 0; /* Make title page invisible */
 }
 
-@media (min-height: 500px) {
-    #launch-page-box {
-        margin-top: 150px;
-    }
-}
-
-@media (min-width: 600px) {
-    #launch-page-box {
-        margin-left: -180px;
-    }
- }
-
 #launch-page-name {
     color: #CB152B;
-    font-size: 5rem;
+    font-size: 4.8rem;
     /* border: 1px solid black; */
     text-align: left;
-    max-width: 700px;
+    min-width: 667px;
+
+    border: 1px solid black;
 }
 
 #launch-page-text {
@@ -67,19 +67,48 @@ section {
     font-weight: normal;
     font-size: 3rem;
     max-width: 500px;
-    /* border: 1px solid black; */
     opacity: 0;
-    margin-top: -20px;
+    
+    border: 1px solid black;
 }
 
 #launch-text-effect {
     color: rgba(53, 73, 125, 0.40);
 }
 
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+    #launch-page-container {
+        align-items: center;
+        justify-content: center;
+    }
 
+    #launch-page-name {
+        min-width: 373px;
+        font-size: 3.9rem;
+        margin-top: 80%;
+        margin-left: 0px;
+    }
 
+    #launch-page-text {
+        max-width: 320px;
+        font-size: 2.75rem;
+        margin-left: 0px;
+    }
+}
 
+@media only screen and (min-width: 480px) and (max-width: 812px) and (orientation: landscape) {
+    #launch-page-container {
+        align-items: start;
+    }
 
+    #launch-page-name {
+        min-width: 373px;
+        font-size: 3.9rem;
+        margin-left: 0px;
+        margin-top: 0;
+    }
+  }
+  
 
 /* Landing Page */
 #landing-page-section {
@@ -188,8 +217,14 @@ section {
     margin-right: 30px;
     margin-top: auto;
     margin-bottom: 30px;
-    position: relative  ;
+    position: relative;
+
+    display: none;
 }
+
+
+
+
 
 /* Text styling */
 .red-text {

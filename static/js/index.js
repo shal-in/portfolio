@@ -25,24 +25,24 @@ function textTypingEffect(element, text, i=0) {
 
 // Launch Page Animation
 
-// Comment Out
-launchPageNameEl.textContent = 'Shalin Ahasan';
-launchPageTextEl.style.opacity = 1;
+// // Comment Out
+// launchPageNameEl.textContent = 'Shalin Ahasan';
+// launchPageTextEl.style.opacity = 1;
 
-// // Comment In
-// document.addEventListener("DOMContentLoaded", function() {
-//     // Wait for the DOM to be fully loaded
-//     setTimeout(function() {
-//       // After a delay, hide the title page
-//       document.getElementById("launch-page-container").classList.add("hide");
-//     }, 2200); // Adjust the delay (in milliseconds) as needed
-//   });
+// Comment In
+document.addEventListener("DOMContentLoaded", function() {
+    // Wait for the DOM to be fully loaded
+    setTimeout(function() {
+      // After a delay, hide the title page
+      document.getElementById("launch-page-container").classList.add("hide");
+    }, 2200); // Adjust the delay (in milliseconds) as needed
+  });
 
-// textTypingEffect(launchPageNameEl, text1);
-// setTimeout(() => {
-//     launchPageTextEl.classList.add('fade-in')
-//     launchPageTextEl.style.opacity = 1
-// }, 800)
+textTypingEffect(launchPageNameEl, text1);
+setTimeout(() => {
+    launchPageTextEl.classList.add('fade-in')
+    launchPageTextEl.style.opacity = 1
+}, 800)
 
 const arrowDownEl = document.getElementById('arrow-down');
 window.addEventListener('scroll', function() {
