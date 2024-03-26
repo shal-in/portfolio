@@ -7,6 +7,8 @@ const launchPageTextEl = document.getElementById('launch-page-text');
 const launchPageBoxEl = document.getElementById('launch-page-box');
 const text1 = `Shalin Ahasan`;
 
+const arrowDownEl = document.getElementById('arrow-down');
+
 function textTypingEffect(element, text, i=0) {
     if (i === 0) {
         element.innerHTML = '';
@@ -25,29 +27,34 @@ function textTypingEffect(element, text, i=0) {
 
 // Launch Page Animation
 
-// // Comment Out
-// launchPageNameEl.textContent = 'Shalin Ahasan';
-// launchPageTextEl.style.opacity = 1;
+// Comment Out
+launchPageNameEl.textContent = 'Shalin Ahasan';
+launchPageTextEl.style.opacity = 1;
+arrowDownEl.style.display = 'flex'
 
-// Comment In
-document.addEventListener("DOMContentLoaded", function() {
-    // Wait for the DOM to be fully loaded
-    setTimeout(function() {
-      // After a delay, hide the title page
-      document.getElementById("launch-page-container").classList.add("hide");
-    }, 2200); // Adjust the delay (in milliseconds) as needed
-  });
+// // Comment In
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Wait for the DOM to be fully loaded
+//     setTimeout(function() {
+//       // After a delay, hide the title page
+//       document.getElementById("launch-page-container").classList.add("hide");
 
-textTypingEffect(launchPageNameEl, text1);
-setTimeout(() => {
-    launchPageTextEl.classList.add('fade-in')
-    launchPageTextEl.style.opacity = 1
-}, 800)
+//         setTimeout(() => {
+//             arrowDownEl.style.display = 'flex'
+//         }, 1500)
 
-const arrowDownEl = document.getElementById('arrow-down');
+//     }, 2200); // Adjust the delay (in milliseconds) as needed
+
+// });
+
+// textTypingEffect(launchPageNameEl, text1);
+// setTimeout(() => {
+//     launchPageTextEl.classList.add('fade-in')
+//     launchPageTextEl.style.opacity = 1
+// }, 800)
+
 window.addEventListener('scroll', function() {
-    if (window.scrollY > 200) { // Adjust the threshold value as needed
-        console.log('Scrolled down more than 200 pixels');
+    if (window.scrollY > 40) { // Adjust the threshold value as needed
         arrowDownEl.classList.add('fade-out');
         setTimeout(() => {
         arrowDownEl.style.display = 'none';

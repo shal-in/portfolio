@@ -12,8 +12,8 @@ window.onload = function() {
     canvas.willReadFrequently = true;
 
     // Create a fixed-size canvas with dimensions 200x200
-    var canvasWidth = 200;
-    var canvasHeight = 200;
+    var canvasWidth = 225;
+    var canvasHeight = 225;
 
     // // Draw lines (Comment In)
     // drawLine([getRandomInt(0,60),60], [getRandomInt(140,200), 60], getRandomColour(), 3); // Draw a horizontal line
@@ -55,10 +55,10 @@ window.onload = function() {
     //     circle = drawCircleThroughTwoPoints(leftPoint, bottomPoint, getRandomColour(), 3)
     // }
 
-    drawLine([0,60], [200,60], 'grey', 2)
-    drawLine([0,140], [200,140], 'grey', 2)
-    drawLine([60,0], [60,200], 'grey', 2)
-    drawLine([140,0], [140,200], 'grey', 2)
+    drawLine([0,60], [350,60], 'grey', 2)
+    drawLine([0,140], [350,140], 'grey', 2)
+    drawLine([60,0], [60,350], 'grey', 2)
+    drawLine([140,0], [140,350], 'grey', 2)
 
 
 

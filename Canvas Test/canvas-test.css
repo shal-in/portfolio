@@ -9,8 +9,8 @@ body {
 
 #canvas-container {
     margin: auto;
-    /* border: 1px solid red; */
-    width: 250px;
+    border: 1px solid red;
+    width: 500px;
 }
 
 #myCanvas {
@@ -24,4 +24,6 @@ body {
     font-style: 'Kufam';
     font-weight: 600;
     margin: auto;
+    font-size: 1rem;
+    width: 300px;
 }

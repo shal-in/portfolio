@@ -45,7 +45,7 @@ section {
     user-select: none;
     background-color: #BDCFE4;
 
-    /* display: none; */
+    display: none;
 }
 
 #launch-page-container.hide {
@@ -110,6 +110,10 @@ section {
   }
   
 
+
+
+
+
 /* Landing Page */
 #landing-page-section {
     display: flex;
@@ -119,41 +123,69 @@ section {
 
 #top-row-container {
     display: flex;
-    /* border: 3px solid black; */
     max-width: 1000px;
     margin: auto;
+
+    /* border: 3px solid black; */
 }
 
+#canvas-container {
+    margin: auto;
+    margin-left: 50px;
+
+    /* border: 1px solid red; */
+}
+
+#myCanvas {
+    display: block; /* Change the display property to block */
+    margin: auto; /* Set the top and bottom margins to auto */
+    
+    /* border: 1px solid black; */
+}
+
+#canvas-text {
+    color: #1E1E34;
+    font-style: 'Kufam';
+    font-weight: 600;
+    margin: auto;
+    font-size: 1rem;
+    width: 300px;
+}
+
+
 #landing-page-text-container {
-    font-size: 2rem;
+    font-size: 2.25rem;
     min-width: 280px;
-    max-width: 450px;
-    /* border: 1px solid brown; */
     margin: auto;
     margin-left: 80px;
+
+    /* border: 2px solid brown; */
 }
 
 #landing-page-text-0 {
     margin-top: auto;
     margin-bottom: 20px;
+
     /* border: 1px solid black; */
 }
 
 #landing-page-text-1 {
     margin-top: auto;
     margin-bottom: auto;
+
     /* border: 1px solid black; */
 }
 
 #landing-page-connect-container {
     display: flex;
     flex-wrap: wrap;
-    /* border: 2px solid green; */
     min-width: 280px;
     max-width: 400px;
     margin-right: auto;
     margin-left: 150px;
-    margin-top: -100px;
+    margin-bottom: auto;
+
+    /* border: 2px solid green; */
 }
 
 #landing-page-connect-text {
@@ -162,6 +194,7 @@ section {
     font-size: 2em;
     margin-top: auto;
     margin-bottom: 20px;
+    color: #1E1E34;
 }
 
 .connect-container {
@@ -192,23 +225,6 @@ section {
     margin-bottom: auto;
 }
 
-@media only screen and (max-width: 750px) {
-    #top-row-container {
-        display: block;
-    }
-    
-
-    #landing-page-text-container {
-        margin-left: 0px;
-    }
-
-    #landing-page-connect-container {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0px;
-    }
-}
-
 #arrow-down {
     width: 40px;
     height: auto;
@@ -217,14 +233,76 @@ section {
     margin-right: 30px;
     margin-top: auto;
     margin-bottom: 30px;
-    position: relative;
+    position: absolute;
+    bottom: 1vh;
+    right: 0;
 
     display: none;
 }
 
+/* Desktop too narrow */
+@media (max-width: 808px) and (max-height: 610px) {
+    #landing-page-text-container {
+        font-size: 2rem;
+    }
+
+    #landing-page-connect-text {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .connect-container {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 750px) and (orientation: portrait) {
+    #top-row-container {
+        display: block;
+    }
+    
+    #canvas-container {
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    #landing-page-text-container {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        
+    }
+
+    #landing-page-connect-container {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+
+        font-size: 1rem;
+    }
+
+    .connect-container {
+        font-size: 1rem;
+    }
+}
+
+
+/* Mobile Landscape */
+@media only screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape) {
+    section {
+        height: auto;
+    }
+  }
+  
 
 
 
+
+
+  
 
 /* Text styling */
 .red-text {
