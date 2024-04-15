@@ -1,0 +1,95 @@
+*{
+    outline: 0;
+    margin: 0px;
+}
+
+:root{
+    --BG-colour: #D0D9E5;
+    --primary-text-colour: #35497D;
+    --highlight-text-colour: #B72015;
+    --secondary-text-colour: black;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    background-color: var(--BG-colour);
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 4rem;
+}
+
+section{
+    border: 2px solid purple;
+    max-width: 1280px;
+    height: 99vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+    margin: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 430px) and (orientation: portrait),
+       screen and (max-height: 430px) and (orientation: landscape) {
+  html {
+    font-size: 9px;
+  }
+}
+
+  
+
+/* Text styles */
+.red-text{
+    color: var(--highlight-text-colour);
+}
+
+.extra-bold{
+    font-weight: 900;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.semi-bold{
+    font-weight: 600;
+}
+
+
+/* Landing section */
+#landing-paragraph-1{
+    margin-bottom: 3rem;
+}
+
+#landing-paragraph-2{
+    margin-bottom: 3rem;
+}
+
+
+
+
+.landing-connect{
+    display: flex;
+    border: 1px solid red;
+    margin-left: 10px;
+    max-width: 225px;
+    font-size: 1.75rem;
+}
+
+.landing-connect-icon{
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+    fill: var(--highlight-text-colour)
+}
