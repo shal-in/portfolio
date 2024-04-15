@@ -23,9 +23,8 @@ body{
 }
 
 section{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     max-width: 1280px;
-    height: 99vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -67,7 +66,33 @@ section{
 }
 
 
+/* General section styling */
+.section-container{
+    margin-bottom: 3rem;
+}
+
+.section-header{
+    color: var(--highlight-text-colour);
+    font-size: 3.25rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.section-paragraph{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
 /* Landing section */
+#landing-container{
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
 #landing-paragraph-1{
     margin-bottom: 3rem;
 }
@@ -75,9 +100,6 @@ section{
 #landing-paragraph-2{
     margin-bottom: 3rem;
 }
-
-
-
 
 .landing-connect{
     display: flex;
@@ -92,4 +114,50 @@ section{
     height: auto;
     margin-right: 0.5rem;
     fill: var(--highlight-text-colour)
+}
+
+
+/* About section */
+
+
+#skills-container{
+    margin-right: auto;
+}
+    /* Skills list */
+.skills-list-header{
+    font-size: 2.75rem;
+}
+
+.skills-list-element{
+    font-size: 2rem;
+}
+
+#skills-list-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem
+}
+
+@media (max-width: 1000px) {
+    #skills-list-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    #skills-list-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 430px) and (orientation: portrait) {
+    #skills-list-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-height: 430px) and (orientation: landscape) {
+    #skills-list-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
