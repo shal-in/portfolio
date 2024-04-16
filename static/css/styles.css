@@ -11,11 +11,28 @@
 }
 
 html{
-    font-size: 15px;
+    font-size: 12px;
 }
+
+    /* Large desktops */
+@media (min-width: 1400px){
+    html{
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 430px) and (orientation: portrait),
+       screen and (max-height: 430px) and (orientation: landscape) {
+  html {
+    font-size: 9px;
+  }
+}
+
 
 body{
     background-color: var(--BG-colour);
+    color: var(--secondary-text-colour);
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     letter-spacing: 1px;
@@ -30,6 +47,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 6rem;
 }
 
 .section-container{
@@ -39,18 +57,17 @@ section{
     /* border: 1px solid black; */
 }
 
-@media screen and (max-width: 430px) and (orientation: portrait),
-       screen and (max-height: 430px) and (orientation: landscape) {
-  html {
-    font-size: 9px;
-  }
-}
+
 
   
 
 /* Text styles */
 .red-text{
     color: var(--highlight-text-colour);
+}
+
+.italic{
+    font-style: italic;
 }
 
 .extra-bold{
@@ -65,10 +82,20 @@ section{
     font-weight: 600;
 }
 
+.hyperlink{
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.hyperlink:hover{
+    color: var(--highlight-text-colour);
+    cursor: pointer;
+}
+
 
 /* General section styling */
 .section-container{
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .section-header{
@@ -85,6 +112,10 @@ section{
 }
 
 /* Landing section */
+#landing-section{
+    margin-bottom: 0px;
+}
+
 #landing-container{
     height: 99vh;
     display: flex;
@@ -118,8 +149,6 @@ section{
 
 
 /* About section */
-
-
 #skills-container{
     margin-right: auto;
 }
@@ -132,10 +161,10 @@ section{
     font-size: 2rem;
 }
 
-#skills-list-grid{
+#skills-list-grid{  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3rem
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8rem;
 }
 
 @media (max-width: 1000px) {
@@ -147,17 +176,153 @@ section{
 @media (max-width: 750px) {
     #skills-list-grid{
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
     }
 }
 
 @media screen and (max-width: 430px) and (orientation: portrait) {
     #skills-list-grid{
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
     }
 }
 
 @media screen and (max-height: 430px) and (orientation: landscape) {
     #skills-list-grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+/* Projects section */
+.secondary-section-header{
+    color: var(--highlight-text-colour);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#featured-projects-paragraph-1{
+    margin-bottom: 0px;
+}
+
+    /* Projects grid */
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+}
+
+@media (max-width: 1100px) {
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* Projects item */
+.projects-item-title{
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+.projects-hyperlink{
+    color: var(--highlight-text-colour);
+    user-select: none;
+    font-size: 4rem;
+}
+
+.projects-item-description{
+    font-size: 1.75rem;
+}
+
+.projects-item-keywords{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.projects-item-keywords-item{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--highlight-text-colour);
+    border: 1px solid var(--highlight-text-colour);
+    text-align: center;
+}
+
+
+
+
+
+/* Footer section */
+#footer-section{
+    margin-top: 6rem;
+    margin-bottom: 0;
+}
+
+#footer-container{
+    font-size: 1.5rem;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+    /* Footer text */
+#footer-text-container{
+    margin-right: auto;
+}
+
+.footer-text{
+    font-weight: 700;
+}
+
+#footer-text-3{
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.footer-hyperlink{
+    color: blue;
+    font-weight: 700;
+}
+
+    /* Footer connect */
+#footer-connect-container{
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.footer-connect-hyperlink{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black
+}
+
+@media (max-width: 1000px) {
+    #footer-container{
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-text{
+        margin: auto;
+        max-width: 90%;
+    }
+
+    #footer-text-3{
+        margin: auto;
+        margin-top: 1.5rem;
+    }
+    
+    #footer-text-3{
+        max-width: 90%;
+    }
+
+    #footer-connect-container{
+        margin: auto;
+        margin-top: 2rem;
     }
 }
