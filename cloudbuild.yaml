@@ -1,0 +1,16 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/personal-website/portfolio-website:$SHORT_SHA', '.']
+
+  # Step 2: Push the Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/personal-website/portfolio-website:$SHORT_SHA']
+
+  # Step 3: Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud beta run deploy portfolio-website --region=europe-west1 --platform=managed --image=gcr.io/personal-website/portfolio-website:$SHORT_SHA
