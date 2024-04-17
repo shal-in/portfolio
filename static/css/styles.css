@@ -42,12 +42,13 @@ body{
 section{
     /* border: 2px solid purple; */
     max-width: 1280px;
+    min-height: 99vh;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
 }
 
 .section-container{
@@ -134,7 +135,6 @@ section{
 
 .landing-connect{
     display: flex;
-    border: 1px solid red;
     margin-left: 10px;
     max-width: 225px;
     font-size: 1.75rem;
@@ -199,7 +199,6 @@ section{
     color: var(--highlight-text-colour);
     font-size: 2.75rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
 }
 
 #featured-projects-paragraph-1{
@@ -257,8 +256,9 @@ section{
 
 /* Footer section */
 #footer-section{
-    margin-top: 6rem;
     margin-bottom: 0;
+    min-height: auto;
+    margin-top: 3rem;
 }
 
 #footer-container{
@@ -266,6 +266,7 @@ section{
     display: grid;
 
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
 }
 
     /* Footer text */
