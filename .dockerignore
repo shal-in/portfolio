@@ -1,9 +1,0 @@
-# Ignore virtual environments
-venv/
-
-# Ignore local development files
-*.pyc
-__pycache__/
-.vscode/
-
-README.md
