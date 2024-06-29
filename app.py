@@ -10,24 +10,24 @@ def index():
 
 # Define other routes above the shortener route 
 
-@app.route("/<shortener>")
-def shortener_page(shortener):
-    api_url = 'https://url.byshalin.com/api/get-url'
-    params = {"shortener": shortener}
+# @app.route("/<shortener>")
+# def shortener_page(shortener):
+#     api_url = 'https://url.byshalin.com/api/get-url'
+#     params = {"shortener": shortener}
 
-    try:
-        response = requests.get(api_url, params=params)
+#     try:
+#         response = requests.get(api_url, params=params)
 
-        if response.status_code == 200:
-            data = response.json()
+#         if response.status_code == 200:
+#             data = response.json()
 
-            return redirect(data)
+#             return redirect(data)
             
-        else:
-            return jsonify({"error": "Failed to fetch data"}), response.status_code
+#         else:
+#             return jsonify({"error": "Failed to fetch data"}), response.status_code
         
-    except requests.exceptions.RequestException as e:
-        return jsonify({"error": str(e)}), 500  # Handle network errors
+#     except requests.exceptions.RequestException as e:
+#         return jsonify({"error": str(e)}), 500  # Handle network errors
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))
