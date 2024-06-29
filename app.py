@@ -1,8 +1,5 @@
 from flask import Flask, jsonify, redirect, send_file
-import io
 import requests
-import base64
-import mimetypes
 import os
 
 app = Flask(__name__)
