@@ -13,7 +13,7 @@ def index():
 
 @app.route("/<shortener>")
 def shortener_page(shortener):
-    api_url = 'https://url.byshalin.com/api/get-shortener'
+    api_url = 'https://short.byshalin.com/api/get-shortener'
     params = {"shortener": shortener}
 
     try:
