@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "indexxss"
+    return "indexx"
 
 # Define other routes above the shortener route 
 
