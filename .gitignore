@@ -34,8 +34,5 @@ Thumbs.db
 *.tmp
 
 # Ignore designs
-design/
-
-canvas-upload.html
-
-assets/svg/
+website/
+scrap.txt
