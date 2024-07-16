@@ -1,23 +1,28 @@
-from flask import Flask, jsonify, redirect, send_file, make_response
+from flask import Flask, jsonify, redirect, send_file, make_response, render_template
 import requests
 import os
 import base64
+import datetime
 
 app = Flask(__name__)
+DEFAULT_API_URL = 'https://short.byshalin.com/api'
+
+if not os.path.exists("/date.txt"):
+    date = datetime.datetime.now()
+    formatted_date = date.strftime("%d/%m/%Y")
+    
 
 @app.route("/")
 def index():
-    return "indexx"
+    return render_template("portfolio.html")
 
 # Define other routes above the shortener route 
-
 @app.route("/<shortener>")
 def shortener_page(shortener):
-    api_url = 'https://short.byshalin.com/api/get-shortener'
     params = {"shortener": shortener}
 
     try:
-        response = requests.get(api_url, params=params)
+        response = requests.get(f'{DEFAULT_API_URL}/get-shortener', params=params)
 
         if response.status_code == 200:
             data = response.json()
