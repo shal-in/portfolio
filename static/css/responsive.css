@@ -60,11 +60,6 @@
         margin-left: auto;
     }
 
-    #skills-section{
-        margin-right: auto;
-        margin-left: 0;
-    }
-
     #footer-section{
         margin-top: 1.5rem;
         border-top: 1px dashed var(--seconday-text-main);
